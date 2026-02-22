@@ -1,4 +1,6 @@
-# Lab5--IAM--RECOVER-PASSWORD-OF-USER
+# Lab 4-IAM--RECOVER-PASSWORD-OF-USER
+
+https://www.youtube.com/watch?v=NsFmpvNKknM
 how to recover a password for the user 
 
 IAM LAB 5 (How to Recover Password of User)
