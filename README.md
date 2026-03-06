@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=NsFmpvNKknM
 
 IAM LAB 5 – Recover Password for IAM User
 
- Step 1 – Login to AWS Console
+Step 1 – Login to AWS Console
 Sign in to the AWS Management Console using an admin account.
 
 Step 2 – Open IAM Service
