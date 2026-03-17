@@ -1,44 +1,109 @@
-# Lab 4-IAM--RECOVER-PASSWORD-OF-USER
+# Lab 4-IAM-RECOVER-PASSWORD-OF-USER
 
 https://www.youtube.com/watch?v=NsFmpvNKknM
 
 IAM LAB 5 – Recover Password for IAM User
 
-# Step 1 – Login to AWS Console
-Sign in to the AWS Management Console using an admin account.
+# Part 1: Create User (Without Finalizing Password for Use)
 
-# Step 2 – Open IAM Service
-In the search bar, type IAM and open the Identity and Access Management dashboard.
+Log in to AWS Console (root/admin)
 
-# Step 3 – Go to Users
-On the left panel, click Users.
+Go to IAM (Identity and Access Management)
 
-# Step 4 – Select the User
-From the user list, click the username whose password you want to recover.
+Click Users → Create user
 
-# Step 5 – Open Security Credentials
-Inside the user details page, select the Security credentials tab.
+User Setup
 
-# Step 6 – Manage Console Access
-Under Console access, click Manage.
+Enter User name (example: test-user)
 
-# Step 7 – Reset Password
-Select Reset password.
+Select:
+✅ Provide user access to the AWS Management Console
 
-# Step 8 – Choose Password Option
-Select Auto-generated password.
+Choose either:
 
-# Step 9 – Force Password Change
-Enable the option User must create a new password at next sign-in.
+Auto-generated password (but don’t download/forget it)
+OR
 
-# Step 10 – Apply Reset
-Click Reset password.
+Skip noting the custom password
 
-# Step 11 – Download Credentials
-Download the .csv file containing the temporary password.
+Keep:
+✅ User must create a new password at next sign-in
 
-# Step 12 – Send to User
-Send the CSV file or password securely to the user so they can log in and create a new password.
+👉 Click Next → Skip permissions → Create user
 
-Result of the Lab
-The IAM user can now log in with the temporary password and will be required to create a new password during the first login.
+Situation Now
+
+User exists
+
+But password is unknown / not available
+
+User cannot log in
+
+# Part 2: Assign New Password (Admin Reset)
+
+Go to IAM
+
+Click Users
+
+Select your user (test-user)
+
+Go to Security Credentials
+
+Click Security credentials tab
+
+Set New Console Password
+
+Under Console password → Click Manage
+
+Choose:
+✅ Enable console access (if not already enabled)
+
+Select:
+✅ Custom password
+
+Enter a new temporary password
+
+Tick:
+✅ User must create a new password at next sign-in
+
+👉 Click Apply
+
+# Part 3: User Login (Incognito Window)
+
+Open Incognito / Private window
+
+Use IAM login URL
+
+Enter:
+
+Username
+
+New temporary password
+
+Part 4: Force Password Change
+
+AWS will prompt:
+
+Enter Current password (temporary one)
+
+Enter New password
+
+Confirm new password
+
+👉 Click Change password
+
+# Final Result
+
+User recovered without old password
+
+Admin assigned new password
+
+User successfully logged in
+
+Password updated securely
+
+# Key Concept (Important)
+
+Admin can reset password anytime
+
+Old password is not required
